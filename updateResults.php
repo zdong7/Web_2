@@ -20,13 +20,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT A.sectionId, I.email, A.outcomeId, A.major, SUM(A.weight) AS weightTotal
-FROM Assessments A
-NATURAL JOIN Instructors I
-NATURAL JOIN Sections S
-WHERE A.weight <>100
-GROUP BY A.major
-ORDER BY I.email ASC, A.major ASC, A.outcomeId ASC;";
+$sql = "SELECT sectionId, outcomeId, major, numberofStudents, description
+FROM OutcomeResults
+NATURAL JOIN Outcomes
+NATURAL JOIN PerformanceLevels
+WHERE major = '{$major}' AND sectionId = '{$sectionId}' AND outcomeId = '{$outcome}'
+ORDER BY OutcomeResults.performanceLevel;";
 
 
 //echo $sql;
