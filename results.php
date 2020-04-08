@@ -1,5 +1,3 @@
-  GNU nano 2.3.1                                                       File: results.php                                                                                                                    
-
 <?php
 $servername = "dbs2.eecs.utk.edu";
 $username = "zlu21";
@@ -48,9 +46,5 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
-
-
-
-
 
 
