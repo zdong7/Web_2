@@ -99,3 +99,19 @@ col{
     border-style: solid solid solid solid;
     border-color: rgb(196, 196, 196);
 }
+
+#formResults label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+
+}
+
+#formResults input{
+    width:95%;
+        font-size:30px;
+        padding: 15px;
+        margin: 10px 0;
+        border-width: medium;
+        border-radius: 14px;
+}
