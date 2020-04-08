@@ -6,12 +6,12 @@ $username = "zlu21";
 $password = "";
 $dbname = "cosc465_zlu21";
 
-$assessmentId=$_GET["assessmentId"];
-$sectionId= $_GET["sectionId"];
+$sectionId=$_GET["sectionId"];
+$strengths= $_GET["strengths"];
 $major=$_GET["major"];
 $outcomeId=$_GET["outcomeId"];
-$weight=$_GET["weight"];
-$assessmentDescription=$_GET["assessmentDescription"];
+$weaknesses=$_GET["weaknesses"];
+$actions=$_GET["actions"];
 
 
 // Create connection
@@ -23,15 +23,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO Assessments(assessmentId, sectionId, assessmentDescription, weight, outcomeId, major) VALUES
-($assessmentId, $sectionId, $assessmentDescription, $weight, $outcomeId, $major)
+$sql = "INSERT INTO Narratives(sectionId, major, outcomeId, strengths, weaknesses, actions) VALUES
+($sectionId, $major, $outcomeId, $strengths, $weaknesses, $actions)
 ON DUPLICATE KEY UPDATE
-assessmentId = $assessmentId,
 sectionId = $sectionId,
-assessmentDescription = $assessmentDescription,
-weight = $weight,
+major = $major,
 outcomeId = $outcomeId,
-major = $major;";
+strengths = $strengths,
+weaknesses = $weaknesses,
+actions = $actions;";
 
 
 //echo $sql;

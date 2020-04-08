@@ -8,7 +8,7 @@ $dbname = "cosc465_zlu21";
 
 $sectionId= $_GET["sectionId"];
 $major=$_GET["major"];
-$outcome=$_GET["outcome"];
+$outcomeId=$_GET["outcomeId"];
 $performanceLevel=$_GET["performanceLevel"];
 $numberOfStudents=$_GET["numberOfStudents"];
 
