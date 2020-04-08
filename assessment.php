@@ -20,12 +20,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT sectionId, outcomeId, major, numberofStudents, description
-FROM OutcomeResults
-NATURAL JOIN Outcomes
-NATURAL JOIN PerformanceLevels
+$sql = "SELECT major, outcomeId, sectionId, assessmentDescription, weight
+FROM Assessments
 WHERE major = '{$major}' AND sectionId = '{$sectionId}' AND outcomeId = '{$outcome}'
-ORDER BY OutcomeResults.performanceLevel;";
+ORDER BY weight DESC, assessmentDescription ASC;";
 
 
 //echo $sql;
