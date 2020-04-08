@@ -6,6 +6,8 @@ div{
 header{
     margin-left: 50px;
     margin-right: 50px;
+    border-style: none none solid none;
+    border-color: rgb(196, 196, 196);
 }
         
 #abet, #profile{
@@ -22,8 +24,9 @@ header{
 div nav{
     float: left;
     background-color: rgb(235, 235, 235);
-      
-    width:10%;
+    border-style: none solid none none;
+    border-color: rgb(196, 196, 196);
+    width:20%;
     height:1000px;
     margin-top: inherit;
     font-size: 35px;
@@ -31,7 +34,15 @@ div nav{
     padding-left: 5px;
 
 }
-        
+ 
+div a{
+    position: relative;
+    width: 20%;
+    margin-: 200px;
+    border-style: solid solid solid solid;
+    border-color: rgb(196, 196, 196);
+
+}
 div main{
     float: left;
     background-color: white;
