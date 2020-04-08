@@ -24,9 +24,9 @@ div nav{
     background-color: rgb(235, 235, 235);
       
     width:25%;
-    height:1150px;
+    height:1000px;
     margin-top: inherit;
-    font-size: 40px;
+    font-size: 35px;
     padding-top: 25px;
 }
         
@@ -34,8 +34,8 @@ div main{
     float: left;
     background-color: white;
     width:75%;
-    height:1150px;
+    height:100px;
     margin-top: inherit;
-    font-size: 50px;
+    font-size: 25px;
     padding-top: 30px;
 }
