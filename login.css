@@ -1,6 +1,8 @@
-<style>
+
+
     #sign-in{
         background-color: lightgray;
+        color: black;
         width:97%;
         height:30%;
         font-size: 50px;
@@ -11,6 +13,7 @@
         border-style: solid;
         border-color: gray;
         border-width: thin;
+        
     }
         
     #top input{
@@ -42,4 +45,3 @@
         border: none;
         border-radius: 14px;
     }
-</style>
