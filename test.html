@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Abet web - project 2</title>
-        <link rel="stylesheet" href="test.css">
+        <link rel="stylesheet" href="abet.css">
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css -->
@@ -55,20 +55,28 @@
                     
                 </div>
                 <div class="title2">
-                    <br>
                     <h1>Assessment Plan</h1>
-                    <br>
+                    <br> 
+                </div>
+                    
+                <div class="box4">
                     <form id="formResultsAP">
-                      <label for="st">Weight(%)</label><label for="description">Description</label><br>
-                      <input style="display:inline;" type="number" id="st" name="st" min="1" max="100" ><input  style="display:inline;"type="text" name="description" value="none">
-                      <br>
-                      <input type="number" id="st" name="st" min="1" max="100"><input type="text" name="description" value="none">
-                      <br>
-                      <input type="number" id="st" name="st" min="1" max="100"><input type="text" name="description" value="none">
-                      <br>
-                      <input type="number" id="st" name="st" min="1" max="100"><input type="text" name="description" value="none">
+                        <div APc1>
+                            <label for="st">Weight(%)</label>
+                             <input type="number" id="st" name="st" min="1" max="100">
+                             <input type="number" id="st" name="st" min="1" max="100">
+                             <input type="number" id="st" name="st" min="1" max="100">
+                             <input type="number" id="st" name="st" min="1" max="100">
+                             <input type="submit" value="+ New">
+                        </div>
+                        <div APc2>
+                            <input type="text" name="description" value="none">
+                            <input type="text" name="description" value="none">
+                            <input type="text" name="description" value="none">
+                            <input type="text" name="description" value="none">
+                        </div>
 
-                      <input type="submit" value="+ New">
+
                        <!--
                       <button class="btn waves-effect waves-light" type="submit" name="action"> <i class="material-icons right">add</i>New</button>
                      
@@ -76,31 +84,30 @@
                     -->
                     </form>
                     <br>
-
-                   
+     
                 </div>
+                   
+               
                 <div class="title3">
                     <h1>Narrative Summary</h1>
-            
                     <br>
-            
-                    <form id="formResults">
-                      <label for="NME">Not Meets Expectation:</label><br>
-                      <input type="number" id="nme" name="nme" min="1" max="100"><br>
-                      <label for="ME">Meets Expectation:</label><br>
-                      <input type="number" id="me" name="me" min="1" max="100"><br>
-                        <label for="EE">Exceeds Expectation:</label><br>
-                      <input type="number" id="ee" name="ee" min="1" max="100"><br>
-                      <label for="Total">Total:</label><br>
-                      <p> 180</p>
-                    
-                    
-                       <input type="submit" value="Save Results"> <br>
-                    
-                    </form>
-                    <br>
-
-
+                </div>
+                <div class="box5">
+                    <form id="formResultsNS">
+                        <label for="NME">Not Meets Expectation:</label><br>
+                        <input type="number" id="nme" name="nme" min="1" max="100"><br>
+                        <label for="ME">Meets Expectation:</label><br>
+                        <input type="number" id="me" name="me" min="1" max="100"><br>
+                          <label for="EE">Exceeds Expectation:</label><br>
+                        <input type="number" id="ee" name="ee" min="1" max="100"><br>
+                        <label for="Total">Total:</label><br>
+                        <p> 180</p>
+                      
+                      
+                         <input type="submit" value="Save Results"> <br>
+                      
+                      </form>
+                      <br>
                 </div>
              </div>
         

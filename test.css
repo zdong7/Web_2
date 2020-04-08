@@ -67,8 +67,8 @@
 .title3{
     grid-column-start: 2; 
     grid-column-end: 17;
-    grid-row-start: 11; 
-    grid-row-end: 14;
+    grid-row-start: 13; 
+    grid-row-end: 16;
     
 }
 .box2{
@@ -92,6 +92,34 @@
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
     grid-auto-rows: 100px; 
+}
+.box4{
+    grid-column-start: 2; 
+    grid-column-end: 17;
+    grid-row-start: 10; 
+    grid-row-end: 12;
+}
+.box4 #formResultsAP{
+    grid-column-start: 2; 
+    grid-column-end: 17;
+    grid-row-start: 10; 
+    grid-row-end: 12;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-auto-rows: 100px; 
+}
+.box5{
+    grid-column-start: 2; 
+    grid-column-end: 17;
+    grid-row-start: 15; 
+    grid-row-end: 18;
+}
+}
+.box5 #formResultsNS{
+    grid-column-start: 2; 
+    grid-column-end: 17;
+    grid-row-start: 15; 
+    grid-row-end: 18;
 }
 .nme1{
     grid-column-start: 1; 
