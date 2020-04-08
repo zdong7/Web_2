@@ -50,11 +50,25 @@
     border-top: solid #ACC0D8 1px;
     
 }
-.title{
+.title1{
     grid-column-start: 2; 
     grid-column-end: 17;
     grid-row-start: 1; 
     grid-row-end: 2; 
+    
+}
+.title2{
+    grid-column-start: 2; 
+    grid-column-end: 17;
+    grid-row-start: 6; 
+    grid-row-end: 9;
+    
+}
+.title3{
+    grid-column-start: 2; 
+    grid-column-end: 17;
+    grid-row-start: 11; 
+    grid-row-end: 14;
     
 }
 .box2{
@@ -69,6 +83,38 @@
     grid-column-end: 17;
     grid-row-start: 4; 
     grid-row-end: 8;
+}
+.box3 #formResults{
+    grid-column-start: 2; 
+    grid-column-end: 17;
+    grid-row-start: 4; 
+    grid-row-end: 8;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: 100px; 
+}
+.nme1{
+    grid-column-start: 1; 
+    grid-column-end: 2;
+    grid-row-start: 1; 
+    grid-row-end: 3;
+}
+.me1{
+    grid-column-start: 2; 
+    grid-column-end: 3;
+    grid-row-start: 1; 
+    grid-row-end: 3;
+}
+.ee1{
+    grid-column-start: 3; 
+    grid-column-end: 4;
+    grid-row-start: 1; 
+    grid-row-end: 3;
+}
+input #nme{
+    width: 50%  !important; ;
+    border-style: solid solid solid solid;
+    border-color: rgb(196, 196, 196);
 }
 #abet, #profile{
 
