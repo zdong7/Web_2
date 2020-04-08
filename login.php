@@ -1,3 +1,4 @@
+
 <?php
 $servername = "dbs2.eecs.utk.edu";
 $username = "zlu21";
@@ -38,9 +39,6 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
-$conn->close();
-?>
 
 $conn->close();
 ?>
