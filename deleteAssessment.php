@@ -1,29 +1,17 @@
 <?php
 $servername = "dbs2.eecs.utk.edu";
-$username = "zlu21";
-$password = "";
-$dbname = "cosc465_zlu21";
+$username = "zdong7";
+$password = "abcde12345";
+$dbname = "cosc465_zdong7";
 
-$assessmentId= $_GET["assessmentId"];
+$assessmentId = $_GET["assessmentId"];
 
-
-
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-
-
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
 $sql = "DELETE FROM Assessments WHERE assessmentId='{$assessmentId}';";
-
-
-//echo $sql;
-
-
-
 
 $conn->close();
 ?>
