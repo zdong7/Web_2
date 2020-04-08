@@ -1,32 +1,19 @@
 <?php
 $servername = "dbs2.eecs.utk.edu";
-$username = "zlu21";
-$password = "";
-$dbname = "cosc465_zlu21";
+$username = "zdong7";
+$password = "abcde12345";
+$dbname = "cosc465_zdong7";
 
-$pswrd= $_GET["password"];
-$email= $_GET["email"];
+$Password = $_GET["password"];
+$email = $_GET["email"];
 
-
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-
-
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "UPDATE Instructors SET password = PASSWORD('{$pswrd}') WHERE email='{$email}';";
-
-
-//echo $sql;
-
-
+$sql = "UPDATE Instructors SET password = PASSWORD('{$Password}') WHERE email='{$email}';";
 
 $result = $conn->query($sql);
-
-
 $conn->close();
-?>
-
+?> 
