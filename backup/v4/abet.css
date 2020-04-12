@@ -584,12 +584,7 @@
     justify-content:center;
     padding-right: 30px;
     font-weight: bold;
-    width: 40px;
-    height: 20px;
 }
-#profile:hover{
-    color: white;
-  }
 /* unvisited link */
 a:link {
     color:rgb(63, 155, 241);
