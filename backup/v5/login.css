@@ -1,0 +1,47 @@
+
+
+    #sign-in{
+        background-color: lightgray;
+        color: black;
+        width:97%;
+        height:30%;
+        font-size: 50px;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border-style: solid;
+        border-color: gray;
+        border-width: thin;
+        
+    }
+        
+    #top input{
+        width:95%;
+        font-size:30px;
+        padding: 15px;
+        margin: 10px 0;
+        border-width: medium;
+        border-radius: 14px;
+    }
+        
+    #bot input{
+        width:95%;
+        font-size:30px;
+        padding: 15px;
+        margin: 10px 0;
+        border-width: medium;
+        border-radius: 14px;
+    }
+        
+    #login input{
+        width: 97%;
+            
+        background-color: green;
+        color: white;
+        font-size:30px;
+        padding: 15px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 14px;
+    }
