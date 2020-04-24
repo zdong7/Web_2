@@ -1,3 +1,4 @@
+
 <?php
 $servername = "dbs2.eecs.utk.edu";
 $username = "zdong7";
@@ -17,18 +18,37 @@ $passwd = $_GET["password"];
 $sql = "SELECT s.instructorId, s.sectionId, s.courseId,  com.major, s.semester, s.year FROM Sections s, Instructors i, CourseOutcomeMapping com
 WHERE i.email = '{$email}' AND i.instructorId = s.instructorId  AND i.password = PASSWORD('{$passwd}') AND s.courseId=com.courseId
 ORDER BY year DESC, semester ASC;";
-
+/*
 $result = $conn->query($sql);
 if ($result > 0) {
     while($row = $result->fetch_assoc()) {
         foreach($row as $key => $value){
             echo "$key->$value    ";
+            header("Location: abet.html");
         }
         echo "\n";
+        echo("Password or Email address is not correct??");
     }
 } else {
-        /*echo "Succeed! But no output available!";*/
-        echo "invalid e-mail or password";
+    
+        echo("Password or Email address is not correct!");
+     //   header("Location: login.html");
 }
 $conn->close();
+*/
+
+$result = $conn->query($sql);
+	$data = array();
+
+	if($result->num_rows > 0) {
+		while($row = $result->fetch_assoc()) {
+			$data[] = $row;
+		}
+	}
+	$conn->close();
+	session_start();
+	$_SESSION['user_data'] = json_encode($data);
+	if(count($data) > 0) {header("Location: abet.html");}
+    else {header("Location: login.html?failed=true");}
+    
 ?> 
