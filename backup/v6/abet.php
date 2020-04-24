@@ -1,0 +1,361 @@
+<?php
+	session_start();
+	$user_data = JSON_DECODE($_SESSION['user_data']);
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Abet web - project 2</title>
+        <link rel="stylesheet" href="abet.css">
+        <!--Import Google Icon Font but we are not using it now-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="box1"> <div id="abet"> <h1>UTK ABET</h1> </div>
+            <a href="./login.html"><div id="profile" href="./login.html">
+               <embed src="./img/person-fill.svg" type="image/svg+xml" />
+               <embed src="./img/caret-down-fill.svg" type="image/svg+xml"/>
+            </a>
+              </div></a>
+            <!--
+              <div id="profile"> 
+               <a href="./login.html">
+                <span class="large material-icons">assignment_ind</span>
+               </a>
+             </div>
+
+            -->
+          </div>
+            <div class="nav"> 
+              <div class="navTitle">
+                <h2>Section</h2>
+
+              </div>
+              <div class="navOption">
+                <select name="course">
+                  <option value="COSC365 spring 2019">COSC365  spring 2019</option>
+                  <option value="COSC361 fall 2018">COSC361  fall 2018</option>
+                  <option value="COSC360 summer 2017">COSC360  summer 2017</option>
+                  <option value="COSC340 spring 2016">COSC340  spring 2016</option>
+
+                </select>
+              </div>
+              <!-- fix the css of collection later
+              <div class="collection">
+                <a href="#!" class="collection-item blue-text text-darken-2">Outcome</a>
+                <a href="#!" class="collection-item blue-text text-darken-2">Outcome</a>
+                <a href="#!" class="collection-item blue-text text-darken-2">Outcome</a>
+            </div>
+              -->
+
+              <div class="navOutcome1">
+                <ul>
+                  <li><a class="active" href="#">Outcome 2</a></li>
+                  <li><a href="#">Outcome</a></li>
+                  <li><a href="#">Outcome</a></li>
+                  <li><a href="#">Outcome</a></li>
+                </ul>
+
+              </div>
+
+              <!--
+            <a href="#!" >
+                <div class="navOutcome1">
+                  <div class="collection-item">
+                  Outcome
+                  </div>
+                </div>
+              </a>
+              <a href="#!" >
+                <div class="navOutcome2">
+                  <div class="collection-item">
+                  Outcome
+                  </div>
+                </div>
+              </a>
+              <a href="#!" >
+                <div class="navOutcome3">
+                  <div class="collection-item">
+                  Outcome
+                  </div>
+                </div>
+              </a>
+              <a href="#!" >
+                <div class="navOutcome4">
+                  <div class="collection-item">
+                  Outcome
+                  </div>
+                </div>
+              </a>
+              -->
+              
+
+
+
+
+
+                
+
+            </div>
+            <div class="mainArea">
+              <!-- Fixed Result Area -->
+              <div class="RArea">
+                <div class="RTitle">
+                  <h1>Results</h1>
+                  
+                  <div class="link-top"></div>
+                </div>
+                <div class="RDes">
+                  <br>
+                  <p> Please enter the number of students who donot meet expectations, meet expectations, and exceed expectations. You can type directly into the boxes--you do not need to use the arrows</p>
+                  
+                  <div class="OutcomeSelected">
+                    <p><blod>Outcome 2 - CS:</blod>Design, implement, and evalueate a computing-based solution to meet a given set of computing requirements in the context of the program's discipline.</p>
+                  </div>
+                </div>
+                <div class="RRecord">
+                  <form id="formResults">
+                    <div class="nme1">
+                      <div class="input-field">
+                        <label for="NME">Not Meets Expectation:</label><br>
+
+                      </div>
+                      <div class="input-field">
+                        <input type="number" id="nme" name="nme" min="1" max="100" value="60"><br>
+
+                      </div>
+                      
+
+                          
+                        
+                    </div>
+                    <div class="me1">
+                      <div class="row">
+                        <div class="input-field">
+                          <label for="ME">Meets Expectation:</label><br>
+                        </div>
+                      </div>
+                      <div class="row"> <div class="input-field">
+                        <input type="number" id="me" name="me" min="1" max="100" value="60"><br>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="ee1">
+                      <div class="row">
+                        <div class="input-field">
+                          <label for="EE">Exceeds Expectation:</label><br>
+
+                        </div>
+
+                      </div>
+                      <div class="row">
+                        <div class="input-field">
+                          <input type="number" id="ee" name="ee" min="1" max="100" value="60"><br>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="rTotal">
+                      <div class="input-field">
+                        <label for="Total">Total:</label><br>
+                        <p id="RResult"> 180</p>
+
+                      </div>
+
+
+                    </div>
+                    <div class="rSave">
+                      <input type="submit" value="Save Results"> <br>
+
+                    </div>
+                </form>
+                  
+                </div>
+                
+              </div>
+               <!-- Flex Assessment Plan Area -->
+              <div class="APArea">
+                <div class="APTitle">
+                  <div class="link-top"></div>
+                  <h1>Assessment Plan</h1>
+                  <div class="link-top"></div>
+
+                </div>
+                <div class="APDes">
+                  
+                </div>
+                <div class="APRecord">
+                  <form id="formResultsAP">
+                    <div class="row">
+                      <div class="input-field2">
+
+                      </div>
+                    </div>
+                      <div class="APRow1">
+                        <div class="APc1">
+                          <div class="input-field2">
+                            <label for="Weitht">Weight(%)</label>
+                          </div>
+
+                        </div>
+                        <div class="APc2">
+                          <div class="input-field2">
+                            <label for="Description">Description</label>
+
+                       
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="APRow2">
+                        <div class="APc1">
+                          <div class="input-field2">
+                            <input type="number" id="st" name="st" min="1" max="100" value="25">
+                          </div>
+
+                        </div>
+                        <div class="APc2">
+                          <div class="input-field2">
+                            <input type="text" name="description" placeholder="">
+
+                       
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="APRow3">
+                        <div class="APc1">
+                          <div class="input-field2">
+                            <input type="number" id="st" name="st" min="1" max="100" value="25">
+                            
+                          </div>
+
+                        </div>
+                        <div class="APc2">
+                          <div class="input-field2">
+                            <input type="text" name="description" placeholder="">
+                  
+
+                       
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="APRow4">
+                        <div class="APc1">
+                          <div class="input-field2">
+                            <input type="number" id="st" name="st" min="1" max="100" value="25">
+                            
+                          </div>
+
+                        </div>
+                        <div class="APc2">
+                          <div class="input-field2">
+                            <input type="text" name="description" placeholder="">
+
+                       
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="APRow5">
+                        <div class="APc1">
+                          <div class="input-field2">
+                            <input type="number" id="st" name="st" min="1" max="100" value="25">
+                            
+                          </div>
+
+                        </div>
+                        <div class="APc2">
+                          <div class="input-field2">
+                            <input type="text" name="description" placeholder="">
+
+                       
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="APNew">
+                        <div class="APc1">
+                          <div class="input-field2">
+                            <input type="submit" value="+ New">
+                            
+                          </div>
+
+                        </div>
+                      </div>
+
+
+
+                     
+                      
+
+
+                     <!--
+                    <button class="btn waves-effect waves-light" type="submit" name="action"> <i class="material-icons right">add</i>New</button>
+                   
+                     <input type="submit" value="Save Results"> <br>
+                  -->
+                  </form>
+                  
+                </div>
+
+                
+              </div>
+               <!-- Flext-Fixed Narrative Summary Area -->
+              <div class="NSArea">
+                <div class="NSTitle">
+                  <div class="link-top"></div>
+                  <h1>Narrative Summary</h1>
+                  <div class="link-top"></div>
+                </div>
+                <div class="NSDes">
+                  
+                </div>
+                <div class="NSRecord">
+                  <form id="formResultsNS">
+                    
+                    <div class="input-field3">
+                      <label for="NME">Strengths</label><br>
+                      <input type="text" id="Strengths" name="Strengths" min="1" max="1000" placeholder="none"><br>
+
+                    </div>
+
+                    
+                    
+                    <div class="input-field3">
+                      <label for="ME">Weaknesses</label><br>
+                      <input type="text" id="Weaknesses" name="Weaknesses" min="1" max="1000" placeholder="none"><br>
+
+                    </div>
+                      
+                      
+                    <div class="input-field3">
+                      <label for="EE">Actions</label><br>
+                      <input type="text" id="Actions" name="Actions" min="1" max="1000"  placeholder="none"><br>
+
+                    </div>
+                    
+                  
+                  
+                     <input type="submit" value="Save Results"> <br>
+                  
+                  </form>
+
+                </div>
+              </div>
+
+                
+             </div>
+        
+        
+        </div>
+    </body>
+    <footer>
+
+
+    </footer>
+</html>

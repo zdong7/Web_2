@@ -1,0 +1,63 @@
+body * {
+  margin-left: auto;
+  margin-right: auto; }
+
+div {
+  margin: .5rem auto;
+  padding: 0.5rem; }
+
+#sign-in {
+  display: block;
+  width: 95vw;
+  background-color: lightgrey;
+  border: solid 1px grey; }
+  #sign-in h1 {
+    vertical-align: middle;
+    margin: 0; }
+
+p.error {
+	margin: 1rem 1rem 0;
+	color: red; }
+
+p.success {
+	margin: 1rem 1rem 0;
+	color: green; }
+
+input {
+  margin: 0;
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 4px; }
+
+input[type=submit] {
+  background-color: green;
+  color: white;
+  text-align: center;
+  border-radius: 16px;
+  font-size: 1.5rem; }
+
+/*
+<head>
+	<link rel='stylesheet' href='login.css'>
+</head>
+
+<body>
+	<div id="sign-in">
+	  Please Sign In
+	</div>
+
+	<form>
+	  <div>
+		<input type="email" placeholder="E-mail">
+	  </div>
+	  <div>
+	  <input type="password" placeholder="Password">
+	  </div>
+	  <div>
+		<input type="submit" value="login">
+		</div>
+	</form>
+</body>
+*/
