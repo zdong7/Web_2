@@ -4,15 +4,13 @@ $username = "zdong7";
 $password = "abcde12345";
 $dbname = "cosc465_zdong7";
 
-$conn = @new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
 $email = $_GET["email"];
 $passwd = $_GET["password"];
 
-
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 $sql = "SELECT s.instructorId, s.sectionId, s.courseId,  com.major, s.semester, s.year FROM Sections s, Instructors i, CourseOutcomeMapping com
 WHERE i.email = '{$email}' AND i.instructorId = s.instructorId  AND i.password = PASSWORD('{$passwd}') AND s.courseId=com.courseId
@@ -27,8 +25,7 @@ if ($result > 0) {
         echo "\n";
     }
 } else {
-        /*echo "Succeed! But no output available!";*/
-        echo "invalid e-mail or password";
+        echo "Succeed! But no output available!";
 }
 $conn->close();
 ?> 

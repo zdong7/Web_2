@@ -10,12 +10,12 @@
         Please Sign In
     </div>
 
-    <form>
+    <form method="GET" action="login.php">
         <div id="top">
-            <input type="email" placeholder="E-mail">
+            <input type="email" name="email" placeholder="E-mail" required>
         </div>
         <div id="bot">
-            <input type="password" placeholder="Password">
+            <input type="password" name="password" placeholder="Password" required>
         </div>
         <div id="login">
             <input type="submit" value="login">
