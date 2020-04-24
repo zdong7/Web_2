@@ -9,7 +9,7 @@
         Please Sign In
     </div>
 
-    <form method="GET" action="logAut.php">
+    <form method="GET" action="loginAut.php">
         <div class="NotAuthorized"  id="NotAuthorized" >
             <?php
                 if($_GET['failed']) echo('invalid e-mail or password');
